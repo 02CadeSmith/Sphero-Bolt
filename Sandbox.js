@@ -15,6 +15,7 @@ async function startProgram() {
 */
 
 // Square W/ Different Colors For Each Line & Commit
+/*
 async function startProgram() {
 
 	setMainLed({ r: 0, g: 0, b: 255 });
@@ -37,9 +38,54 @@ async function startProgram() {
 
 }
 
-
+*/
 
 // Square W/ Different Colors & Sounds For Each Line & Commit
+
+async function startProgram() {
+
+	setMainLed({ r: 0, g: 0, b: 255 });
+
+	await speak("Hello Square", true);
+	
+	await Sound.Game.Coin.play(true);
+	
+	await roll((getHeading() + 90), 60, 1);
+
+	await delay(1); 
+
+	setMainLed({ r: 0, g: 255, b: 0 });
+
+	await Sound.Game.Coin.play(true);
+
+	await roll((getHeading() + 90), 60, 1);
+
+	await delay(1); 
+	
+	setMainLed({ r: 255, g: 0, b: 0 });
+
+	await Sound.Game.Coin.play(true);
+
+	await roll((getHeading() + 90), 60, 1);
+
+	await delay(1); 
+	
+	setMainLed({ r: 255, g: 255, b: 0 });
+
+	await Sound.Game.Coin.play(true);
+
+	await roll((getHeading() + 90), 60, 1);
+
+	await delay(1);
+	
+	
+		
+		
+		
+	
+
+}
+
 
 
 
