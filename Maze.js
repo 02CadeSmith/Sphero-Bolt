@@ -38,11 +38,11 @@ async function startProgram() {
 	
 	await delay (1);
 
-	await roll((getHeading() + 90), 60, 1.2);  
+	await roll((getHeading() + 90), 60, 1.15);  
 	
 	await delay (1); 
 	
-	await roll((getHeading() + 35), 60, 1);
+	await roll((getHeading() + 35), 60, 0.95);
 	
 	// Red LED Commit 
 	
@@ -60,4 +60,17 @@ async function startProgram() {
 	
 	// Sound 2 Commit
 
-}
+	await Sound.Animal.Cat.play(true); 
+	
+	await roll((getHeading() + 90), 60, .75) 
+	
+	await delay (1);
+	
+	await roll((getHeading() + 90), 60, .65) 
+	
+	await delay (1);
+	
+	await roll((getHeading() + -90), 60, .75)
+	
+	
+}	
