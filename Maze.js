@@ -16,15 +16,17 @@ async function startProgram() {
 	
 	//Blue LED Commit
 	
-	await roll((getHeading() + 0), 60, 2.5); 
+	await roll((getHeading() + 0), 60, 2.5);  
 	
+	await scrollMatrixText('Slue!', { r: 0, g: 0, b: 255 }, 15, true)
+
 	await delay (1);
 	
 	await setMainLed({ r: 0, g: 0, b: 255 }); 
 	
 	await delay (1);
 	
-	await roll((getHeading() + 90), 60, 1.5); 
+	await roll((getHeading() + 90), 60, 1.6); 
 	
 	await delay (1);
 	
@@ -36,14 +38,18 @@ async function startProgram() {
 	
 	await delay (1);
 
-	await roll((getHeading() + 90), 60, 1.2);  
+	await roll((getHeading() + 90), 60, 1.1);  
 	
 	await delay (1); 
 	
-	await roll((getHeading() + 35), 60, 1);
+	await roll((getHeading() + 35), 60, 1.1);
 	
 	// Red LED Commit 
 	
+	setMainLed({ r: 255, g:0 , b:0  });
 	
+	await delay (1);
+	
+	await roll((getHeading() + -90), 60, .5)
 
 }
