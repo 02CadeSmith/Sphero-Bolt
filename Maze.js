@@ -12,7 +12,7 @@ async function startProgram() {
 
 	await speak("Start", true); 
 
-	await scrollMatrixText('Start!', { r: 66, g: 56, b: 255 }, 15, true)
+	await scrollMatrixText('Start!', { r: 66, g: 56, b: 255 }, 20, true)
 	
 	//Blue LED Commit
 	
@@ -38,11 +38,11 @@ async function startProgram() {
 	
 	await delay (1);
 
-	await roll((getHeading() + 90), 60, 1.1);  
+	await roll((getHeading() + 90), 60, 1.2);  
 	
 	await delay (1); 
 	
-	await roll((getHeading() + 35), 60, 1.1);
+	await roll((getHeading() + 35), 60, 1);
 	
 	// Red LED Commit 
 	
@@ -50,6 +50,14 @@ async function startProgram() {
 	
 	await delay (1);
 	
-	await roll((getHeading() + -90), 60, .5)
+	await roll((getHeading() + -90), 60, .5) 
+	
+	await delay (1);
+	
+	await roll((getHeading() + -85), 60, 1.1) 
+	
+	setMainLed({ r: 0, g:0 , b:0  }); 
+	
+	// Sound 2 Commit
 
 }
