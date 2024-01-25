@@ -86,6 +86,19 @@ async function startProgram() {
 	
 	await roll((getHeading() + -38), 60, 1) 
 	
+	//Sound 3/Purple LED Commit  
+	
+	await delay (1);
+	
+	await Sound.Animal.Monkey.play(true); 
+
+	await scrollMatrixText('Green!', { r: 0, g: 255, b: 0 }, 30, true) 
+	
+	setMainLed({ r: 255, g:0 , b:255 });
+	
+	await roll((getHeading() + 38), 60, 1) 
+	
+	
 	
 	
 	
