@@ -12,13 +12,13 @@ async function startProgram() {
 
 	await speak("Start", true); 
 
-	await scrollMatrixText('Start!', { r: 66, g: 56, b: 255 }, 20, true)
+	await scrollMatrixText('Start!', { r: 66, g: 56, b: 255 }, 30, true)
 	
 	//Blue LED Commit
 	
 	await roll((getHeading() + 0), 60, 2.5);  
 	
-	await scrollMatrixText('Slue!', { r: 0, g: 0, b: 255 }, 15, true)
+	await scrollMatrixText('Blue!', { r: 0, g: 0, b: 255 }, 30, true)
 
 	await delay (1);
 	
@@ -38,23 +38,25 @@ async function startProgram() {
 	
 	await delay (1);
 
-	await roll((getHeading() + 90), 60, 1.15);  
+	await roll((getHeading() + 90), 60, 1.1);  
 	
 	await delay (1); 
 	
-	await roll((getHeading() + 35), 60, 0.95);
+	await roll((getHeading() + 35), 60, 1.05);
 	
-	// Red LED Commit 
+	// Red LED Commit  
+	
+	await scrollMatrixText('Red!', { r: 255, g: 0, b: 0 }, 30, true)
 	
 	setMainLed({ r: 255, g:0 , b:0  });
 	
 	await delay (1);
 	
-	await roll((getHeading() + -90), 60, .5) 
+	await roll((getHeading() + -90), 60, .6) 
 	
 	await delay (1);
 	
-	await roll((getHeading() + -85), 60, 1.1) 
+	await roll((getHeading() + -85), 60, 1.05) 
 	
 	setMainLed({ r: 0, g:0 , b:0  }); 
 	
@@ -66,11 +68,26 @@ async function startProgram() {
 	
 	await delay (1);
 	
-	await roll((getHeading() + 90), 60, .65) 
+	await roll((getHeading() + 90), 60, .75) 
+	
+	await delay (1.5);
+	
+	await roll((getHeading() + -90), 60, .8) 
+	
+	//Green LED Commit 
+	
+	await scrollMatrixText('Green!', { r: 0, g: 255, b: 0 }, 30, true) 
+	
+	setMainLed({ r: 0, g:255 , b:0  }); 
+	
+	await roll((getHeading() + -90), 60, 1.1) 
 	
 	await delay (1);
 	
-	await roll((getHeading() + -90), 60, .75)
+	await roll((getHeading() + -38), 60, 1) 
+	
+	
+	
 	
 	
 }	
