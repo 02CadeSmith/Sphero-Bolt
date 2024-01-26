@@ -6,7 +6,7 @@
 
 //Start Commit
 
-async function startProgram() {
+async function startProgram() { 
 
 	setMainLed({ r: 255, g: 255, b: 255 });
 
@@ -26,7 +26,7 @@ async function startProgram() {
 	
 	await delay (1);
 	
-	await roll((getHeading() + 90), 60, 1.6); 
+	await roll((getHeading() + 90), 60, 1.55); 
 	
 	await delay (1);
 	
@@ -68,11 +68,11 @@ async function startProgram() {
 	
 	await delay (1);
 	
-	await roll((getHeading() + 90), 60, .75) 
+	await roll((getHeading() + 90), 60, .6) 
 	
 	await delay (1.5);
 	
-	await roll((getHeading() + -90), 60, .8) 
+	await roll((getHeading() + -87), 60, .8) 
 	
 	//Green LED Commit 
 	
@@ -80,11 +80,11 @@ async function startProgram() {
 	
 	setMainLed({ r: 0, g:255 , b:0  }); 
 	
-	await roll((getHeading() + -90), 60, 1.1) 
+	await roll((getHeading() + -91), 60, 1.1) 
 	
 	await delay (1);
 	
-	await roll((getHeading() + -38), 60, 1) 
+	await roll((getHeading() + -40), 60, 1.2) 
 	
 	//Sound 3/Purple LED Commit
 	
@@ -101,7 +101,7 @@ async function startProgram() {
 	
 	
 	
-	await roll((getHeading() + 38), 60, 1.6)
+	await roll((getHeading() + 35), 60, 1.6)
 	
 	await delay (1);
 	
