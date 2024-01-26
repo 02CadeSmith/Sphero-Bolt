@@ -101,7 +101,13 @@ async function startProgram() {
 	
 	
 	
-
+	await roll((getHeading() + 38), 60, 1.6)
+	
+	await delay (1);
+	
+	await scrollMatrixText('Finish!', { r: 255, g: 255, b: 255 }, 30, true) 
+	
+	await speak("Finish", true); 
 	
 	
 	
