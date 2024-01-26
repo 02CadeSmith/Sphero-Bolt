@@ -64,7 +64,7 @@ async function startProgram() {
 
 	await Sound.Animal.Cat.play(true); 
 	
-	await roll((getHeading() + 90), 60, .75) 
+	await roll((getHeading() + 90), 60, .8) 
 	
 	await delay (1);
 	
@@ -86,18 +86,22 @@ async function startProgram() {
 	
 	await roll((getHeading() + -38), 60, 1) 
 	
-	//Sound 3/Purple LED Commit  
+	//Sound 3/Purple LED Commit
+	
+	setMainLed({ r: 255, g:0 , b:255 });
 	
 	await delay (1);
 	
 	await Sound.Animal.Monkey.play(true); 
 
-	await scrollMatrixText('Green!', { r: 0, g: 255, b: 0 }, 30, true) 
+	await scrollMatrixText('Purple!', { r: 255, g: 0, b: 255 }, 30, true) 
 	
-	setMainLed({ r: 255, g:0 , b:255 });
+	await delay (1);
 	
-	await roll((getHeading() + 38), 60, 1) 
 	
+	
+	
+
 	
 	
 	
