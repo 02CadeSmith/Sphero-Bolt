@@ -6,6 +6,7 @@
 
 //Start Commit
 
+
 async function startProgram() { 
 
 	setMainLed({ r: 255, g: 255, b: 255 });
@@ -16,6 +17,7 @@ async function startProgram() {
 	
 	//Blue LED Commit
 	
+
 	await roll((getHeading() + 0), 60, 2.5);  
 	
 	await scrollMatrixText('Blue!', { r: 0, g: 0, b: 255 }, 30, true)
@@ -32,6 +34,7 @@ async function startProgram() {
 	
 	//Sound 1 Commit 
 	
+
 	setMainLed({ r: 0, g:0 , b:0  });
 	
 	await Sound.Game.Coin.play(true); 
@@ -46,6 +49,7 @@ async function startProgram() {
 	
 	// Red LED Commit  
 	
+	
 	await scrollMatrixText('Red!', { r: 255, g: 0, b: 0 }, 30, true)
 	
 	setMainLed({ r: 255, g:0 , b:0  });
@@ -56,11 +60,12 @@ async function startProgram() {
 	
 	await delay (1);
 	
-	await roll((getHeading() + -85), 60, 1.05) 
+	await roll((getHeading() + -85), 60, 1.15) 
 	
 	setMainLed({ r: 0, g:0 , b:0  }); 
 	
 	// Sound 2 Commit
+
 
 	await Sound.Animal.Cat.play(true); 
 	
@@ -76,6 +81,7 @@ async function startProgram() {
 	
 	//Green LED Commit 
 	
+
 	await scrollMatrixText('Green!', { r: 0, g: 255, b: 0 }, 30, true) 
 	
 	setMainLed({ r: 0, g:255 , b:0  }); 
@@ -88,6 +94,7 @@ async function startProgram() {
 	
 	//Sound 3/Purple LED Commit
 	
+
 	setMainLed({ r: 255, g:0 , b:255 });
 	
 	await delay (1);
@@ -98,9 +105,9 @@ async function startProgram() {
 	
 	await delay (1);
 	
+	//Finish Commit
 	
-	
-	
+
 	await roll((getHeading() + 35), 60, 1.6)
 	
 	await delay (1);
